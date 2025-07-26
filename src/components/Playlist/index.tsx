@@ -10,7 +10,7 @@ const playlistData = Array.from({ length: 20 }, (_, i) => ({
 
 export function Playlist() {
     return (
-        <ScrollArea h={860} p={16} bg="#F1F1F1" bdrs={16}>
+        <ScrollArea h={500} p={16} bg="#F1F1F1" bdrs={16}>
             <Title mb={16} order={3}>
                 Your Playlist
             </Title>

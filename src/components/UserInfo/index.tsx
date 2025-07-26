@@ -7,16 +7,16 @@ export function UserInfo() {
             <Group wrap="nowrap">
                 <Avatar
                     src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-2.png"
-                    size={64}
+                    size={48}
                     radius="md"
                 />
                 <div>
-                    <Text fz="sm" fw={500} className={classes.name}>
+                    <Text fz="xs" fw={500} className={classes.name}>
                         Robert Glassbreaker
                     </Text>
 
-                    <Group wrap="nowrap" gap={10} mt={3}>
-                        <Text fz="xs" c="dimmed">
+                    <Group wrap="wrap" mt={3}>
+                        <Text fz="xs" c="dimmed" w="100%">
                             robert@glassbreaker.io
                         </Text>
                     </Group>

@@ -40,7 +40,7 @@ export function MusicLibrary() {
     ))
 
     return (
-        <Box bg="#F1F1F1" bdrs={16} mt={16} p={16}>
+        <Box bg="#F1F1F1" bdrs={16} p={16}>
             <Title order={3} mb={6}>
                 Music Library
             </Title>
