@@ -1,4 +1,4 @@
-import { Avatar, Group, ScrollArea, Text, Title } from '@mantine/core'
+import { Avatar, Box, Group, ScrollArea, Text, Title } from '@mantine/core'
 import classes from './style.module.css'
 
 const playlistData = Array.from({ length: 20 }, (_, i) => ({
@@ -10,26 +10,28 @@ const playlistData = Array.from({ length: 20 }, (_, i) => ({
 
 export function Playlist() {
     return (
-        <ScrollArea h={500} p={16} bg="#F1F1F1" bdrs={16}>
+        <Box p={16} pr={0} pb={8} bg="#F1F1F1" bdrs={16}>
             <Title mb={16} order={3}>
                 Your Playlist
             </Title>
-            {playlistData.map((item) => (
-                <Group wrap="nowrap" key={item.id} mb="md">
-                    <Avatar src={item.avatar} size={52} radius="md" />
-                    <div>
-                        <Text fz="lg" fw={500} className={classes.name}>
-                            {item.name}
-                        </Text>
-
-                        <Group wrap="nowrap" gap={10} mt={3}>
-                            <Text fz="xs" c="dimmed">
-                                {item.artist}
+            <ScrollArea h={500}>
+                {playlistData.map((item) => (
+                    <Group wrap="nowrap" key={item.id} mb="md">
+                        <Avatar src={item.avatar} size={52} radius="md" />
+                        <div>
+                            <Text fz="lg" fw={500} className={classes.name}>
+                                {item.name}
                             </Text>
-                        </Group>
-                    </div>
-                </Group>
-            ))}
-        </ScrollArea>
+
+                            <Group wrap="nowrap" gap={10} mt={3}>
+                                <Text fz="xs" c="dimmed">
+                                    {item.artist}
+                                </Text>
+                            </Group>
+                        </div>
+                    </Group>
+                ))}
+            </ScrollArea>
+        </Box>
     )
 }
